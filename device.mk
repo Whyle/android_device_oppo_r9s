@@ -63,9 +63,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-# Device was launched with M
+# Device was launched with N
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.product.first_api_level=23
+    ro.product.first_api_level=25
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
@@ -310,6 +310,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/fstman.ini:system/etc/wifi/fstman.ini
+    $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 # Keyhandler
 PRODUCT_PACKAGES += \
