@@ -38,15 +38,12 @@ include device/oppo/r9s/kernel/AndroidKernel.mk
 # Create a link for the WCNSS config file, which ends up as a writable
 # version in /data/misc/wifi
 $(shell mkdir -p $(TARGET_OUT)/etc/firmware/wlan/prima; \
+    ln -sf /data/misc/wifi/WCNSS_qcom_cfg.ini \
+	    $(TARGET_OUT)/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
 	ln -sf /persist/WCNSS_qcom_wlan_nv.bin \
 	    $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin; \
 	ln -sf /persist/WCNSS_wlan_dictionary.dat \
 	    $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_wlan_dictionary.dat; \
 	ln -sf /persist/WCNSS_qcom_cfg.ini \
 	    $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
-
-$(shell mkdir -p $(TARGET_OUT)/lib/modules; \
-    ln -sf /system/lib/modules/pronto/pronto_wlan.ko \
-        $(TARGET_OUT)/lib/modules/wlan.ko)
-
-endif
+	endif
