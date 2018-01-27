@@ -41,9 +41,9 @@ $(shell mkdir -p $(TARGET_OUT)/etc/firmware/wlan/prima; \
     ln -sf /data/misc/wifi/WCNSS_qcom_cfg.ini \
 	    $(TARGET_OUT)/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
 	ln -sf /persist/WCNSS_qcom_wlan_nv.bin \
-	    $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin; \
+	    $(TARGET_OUT)/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin; \
 	ln -sf /persist/WCNSS_wlan_dictionary.dat \
-	    $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_wlan_dictionary.dat; \
+	    $(TARGET_OUT)/ect/firmware/wlan/prima/WCNSS_wlan_dictionary.dat; \
 	ln -sf /persist/WCNSS_qcom_cfg.ini \
-	    $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
+	    $(TARGET_OUT)/ect/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
 	endif
